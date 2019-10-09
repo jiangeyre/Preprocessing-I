@@ -135,6 +135,11 @@ header{
 	width: 100%;
 	padding: 5%;
 	.centre();
+
+	@media( max-width: 500px ){
+		padding: 10%;
+	}
+
 	.personal-info{
 		display: flex;
 		flex-direction: column;
@@ -147,12 +152,21 @@ header{
 			font-size: 2.5rem;
 		}
 	}
+
+	
+
+
+
 }
 
 .intro-container{
 	background-color: @section-color-2;
 	color: white;
 	padding: 2%;
+
+	@media( max-width: 500px ){
+		padding: 10%;
+	}
 }
 
 .work-container{
@@ -163,9 +177,14 @@ header{
 .skills-container{
 	background-color: @section-color-2;
 	padding: 2%;
+	font-size: 2rem;
 	.skills{
-		ul li{
-			font-size: 1.2rem;
+		ul{
+			list-style: square;
+			li{
+				font-size: 1.5rem;
+				margin: 3%;
+			}
 		}
 	}
 }
@@ -173,6 +192,15 @@ header{
 .interests-container{
 	background-color: @section-color-1;
 	padding: 2%;
+	.interests{
+		ul{ 
+			list-style: square;
+			li{
+				font-size: 1.5rem;
+				margin: 3%;
+			}
+		}
+	}
 }
 
 .links-container{
