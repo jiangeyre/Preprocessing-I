@@ -190,8 +190,15 @@ header .logo {
 .personal-info-container {
   background-color: lightslategrey;
   width: 100%;
+  padding: 5%;
   display: flex;
   justify-content: center;
+}
+.personal-info-container .personal-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.5;
 }
 .personal-info-container .personal-info h1 {
   font-size: 3rem;
@@ -199,12 +206,30 @@ header .logo {
 .personal-info-container .personal-info h2 {
   font-size: 2.5rem;
 }
+.intro-container {
+  background-color: darkslategrey;
+  color: white;
+  padding: 2%;
+}
+.work-container {
+  background-color: darkcyan;
+  padding: 2%;
+}
+.skills-container {
+  background-color: darkslategrey;
+  padding: 2%;
+}
 .skills-container .skills ul li {
   font-size: 1.2rem;
 }
+.interests-container {
+  background-color: lightslategrey;
+  padding: 2%;
+}
 .links-container {
-  background-color: sienna;
+  background-color: lightsteelblue;
   width: 100%;
+  padding: 3%;
 }
 .links-container .links {
   display: flex;
