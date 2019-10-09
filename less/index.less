@@ -58,7 +58,7 @@ table {
 @section-color-5: sienna;
 
 /* MIXINS */
-.center(){
+.centre(){
 	display: flex;
 	justify-content: center;
 }
@@ -79,13 +79,13 @@ html, body {
 	font-size: 62.5%;
 	.center();
 }
+*, *:before, *:after {
+	box-sizing: inherit;
+  }
 body{
 	background-color: @bg-color;
 	font-family: @font;
 	width: 100%;
-}
-h1, h2, h3, h4, h5 {
-	font-size: 2rem;
 }
 img{
 	width: 100%;
@@ -97,11 +97,15 @@ p{
 	font-size: 1.8rem;
 }
 
+.container{
+	max-width: 900px;
+	margin: 0 auto;
+	font-size: 1.6rem;
+}
 
 header{
 	width: 100%;
-	display: flex;
-	justify-content: center;
+	.centre();
 
 	nav{
 		padding: 2%;
@@ -121,11 +125,51 @@ header{
 
 	.logo{
 		width: 10%;
-		.center();
+		.centre();
 	}//this closes the logo
 } //this closes the header
 
+.personal-info-container{
+	background-color: @section-color-1;
+	width: 100%;
+	.centre();
+	.personal-info{
+		line-height: 1.5;
+		h1{
+			font-size: 3rem;
+		}
+		h2{
+			font-size: 2.5rem;
+		}
+	}
+}
 
+.intro-container{
+	background-color: @section-color-2;
+}
+
+.skills-container{
+	.skills{
+		ul li{
+			font-size: 1.2rem;
+		}
+	}
+}
+
+.links-container{
+	background-color: sienna;
+	width: 100%;
+	.links{
+		display: flex;
+		justify-content: space-evenly;
+		color: black;
+
+		.fab{
+			width: 20px !important;
+			height: 20px !important;
+		}
+	}
+}
 
 footer{
 	width: 100%;

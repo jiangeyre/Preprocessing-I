@@ -140,17 +140,15 @@ body {
   display: flex;
   justify-content: center;
 }
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 body {
   background-color: gainsboro;
   font-family: 'Barlow', sans-serif;
   width: 100%;
-}
-h1,
-h2,
-h3,
-h4,
-h5 {
-  font-size: 2rem;
 }
 img {
   width: 100%;
@@ -160,6 +158,11 @@ p {
   line-height: 1.25;
   margin: 20px 0;
   font-size: 1.8rem;
+}
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 1.6rem;
 }
 header {
   width: 100%;
@@ -183,6 +186,34 @@ header .logo {
   width: 10%;
   display: flex;
   justify-content: center;
+}
+.personal-info-container {
+  background-color: lightslategrey;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.personal-info-container .personal-info h1 {
+  font-size: 3rem;
+}
+.personal-info-container .personal-info h2 {
+  font-size: 2.5rem;
+}
+.skills-container .skills ul li {
+  font-size: 1.2rem;
+}
+.links-container {
+  background-color: sienna;
+  width: 100%;
+}
+.links-container .links {
+  display: flex;
+  justify-content: space-evenly;
+  color: black;
+}
+.links-container .links .fab {
+  width: 20px !important;
+  height: 20px !important;
 }
 footer {
   width: 100%;
