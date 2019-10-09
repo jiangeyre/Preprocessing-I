@@ -191,8 +191,9 @@ header .logo {
   background-color: lightslategrey;
   width: 100%;
   padding: 5%;
-  display: flex;
-  justify-content: center;
+  padding-left: -2%;
+  border: 2px dotted black;
+  padding: 2%;
 }
 @media (max-width: 500px) {
   .personal-info-container {
@@ -202,6 +203,7 @@ header .logo {
 .personal-info-container .personal-info {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   line-height: 1.5;
 }
@@ -214,6 +216,7 @@ header .logo {
 .intro-container {
   background-color: darkslategrey;
   color: white;
+  border: 2px dotted black;
   padding: 2%;
 }
 @media (max-width: 500px) {
@@ -221,14 +224,32 @@ header .logo {
     padding: 10%;
   }
 }
+.intro-container h2 {
+  font-size: 3rem;
+}
 .work-container {
   background-color: darkcyan;
+  border: 2px dotted black;
   padding: 2%;
+}
+@media (max-width: 500px) {
+  .work-container {
+    padding: 10%;
+  }
+}
+.work-container h2 {
+  font-size: 3rem;
 }
 .skills-container {
   background-color: darkslategrey;
-  padding: 2%;
   font-size: 2rem;
+  border: 2px dotted black;
+  padding: 2%;
+}
+@media (max-width: 500px) {
+  .skills-container {
+    padding: 10%;
+  }
 }
 .skills-container .skills ul {
   list-style: square;
@@ -239,7 +260,14 @@ header .logo {
 }
 .interests-container {
   background-color: lightslategrey;
+  font-size: 2rem;
+  border: 2px dotted black;
   padding: 2%;
+}
+@media (max-width: 500px) {
+  .interests-container {
+    padding: 10%;
+  }
 }
 .interests-container .interests ul {
   list-style: square;
@@ -248,17 +276,30 @@ header .logo {
   font-size: 1.5rem;
   margin: 3%;
 }
+.interests-container .interests ul li a {
+  text-decoration: underline overline wavy tomato;
+  color: black;
+}
 .links-container {
   background-color: lightsteelblue;
   width: 100%;
   padding: 3%;
+}
+@media (max-width: 500px) {
+  .links-container {
+    padding: 10%;
+  }
 }
 .links-container .links {
   display: flex;
   justify-content: space-evenly;
   color: black;
 }
-.links-container .links .fab {
+.links-container .links a {
+  text-decoration: none;
+  color: black;
+}
+.links-container .links a .fab {
   width: 20px !important;
   height: 20px !important;
 }
