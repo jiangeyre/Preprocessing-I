@@ -146,7 +146,7 @@ body {
   box-sizing: inherit;
 }
 body {
-  background-color: gainsboro;
+  background-color: black;
   font-family: 'Barlow', sans-serif;
   width: 100%;
 }
@@ -158,6 +158,9 @@ p {
   line-height: 1.25;
   margin: 20px 0;
   font-size: 1.8rem;
+}
+hr {
+  color: gainsboro;
 }
 .container {
   max-width: 900px;
@@ -179,7 +182,7 @@ header nav {
 }
 header nav a {
   text-decoration: none;
-  color: black;
+  color: white;
   font-size: 2rem;
 }
 header .logo {
@@ -192,7 +195,7 @@ header .logo {
   width: 100%;
   padding: 5%;
   padding-left: -2%;
-  border: 2px dotted black;
+  border: 2px dotted gainsboro;
   padding: 2%;
 }
 @media (max-width: 500px) {
@@ -216,7 +219,7 @@ header .logo {
 .intro-container {
   background-color: darkslategrey;
   color: white;
-  border: 2px dotted black;
+  border: 2px dotted gainsboro;
   padding: 2%;
 }
 @media (max-width: 500px) {
@@ -229,7 +232,7 @@ header .logo {
 }
 .work-container {
   background-color: darkcyan;
-  border: 2px dotted black;
+  border: 2px dotted gainsboro;
   padding: 2%;
 }
 @media (max-width: 500px) {
@@ -243,7 +246,7 @@ header .logo {
 .skills-container {
   background-color: darkslategrey;
   font-size: 2rem;
-  border: 2px dotted black;
+  border: 2px dotted gainsboro;
   padding: 2%;
 }
 @media (max-width: 500px) {
@@ -261,7 +264,7 @@ header .logo {
 .interests-container {
   background-color: lightslategrey;
   font-size: 2rem;
-  border: 2px dotted black;
+  border: 2px dotted gainsboro;
   padding: 2%;
 }
 @media (max-width: 500px) {
@@ -319,7 +322,7 @@ footer nav {
 }
 footer nav a {
   text-decoration: none;
-  color: black;
+  color: white;
   font-size: 2rem;
 }
 footer .logo {
