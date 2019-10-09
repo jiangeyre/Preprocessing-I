@@ -48,15 +48,108 @@ table {
 	border-spacing: 0;
 }
 
+/* VARIABLES */
+@font: 'Barlow', sans-serif;
+@bg-color: gainsboro;
+@section-color-1: lightslategrey;
+@section-color-2: darkslategrey;
+@section-color-3: darkcyan;
+@section-color-4: olivedrab;
+@section-color-5: sienna;
+
+/* MIXINS */
+.center(){
+	display: flex;
+	justify-content: center;
+}
+.border(){
+	border: 1px dotted black;
+	margin: 1%;
+	padding: 2%;
+}
+
 /* Set every element's box-sizing to border-box */
 * {
     box-sizing: border-box;
 }
 
 html, body {
-    height: 100%;
+	box-sizing: border-box;
+	height: 100%;
+	font-size: 62.5%;
+	.center();
+}
+body{
+	background-color: @bg-color;
+	font-family: @font;
+	width: 100%;
+}
+h1, h2, h3, h4, h5 {
+	font-size: 2rem;
+}
+img{
+	width: 100%;
+	height: auto;
+}
+p{
+	line-height: 1.25;
+	margin: 20px 0;
+	font-size: 1.8rem;
 }
 
-body{
-	background-color: bisque;
-}
+
+header{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+
+	nav{
+		padding: 2%;
+		z-index: 999;
+		width: 100%;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+
+		a{
+			text-decoration: none;
+			color: black;
+			font-size: 2rem;
+			
+		} //this closes the a tags in nav
+	} //this closes the nav tag in header
+
+	.logo{
+		width: 10%;
+		.center();
+	}//this closes the logo
+} //this closes the header
+
+
+
+footer{
+	width: 100%;
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: center;
+
+	nav{
+		padding: 2%;
+		z-index: 999;
+		width: 100%;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+
+		a{
+			text-decoration: none;
+			color: black;
+			font-size: 2rem;
+		} // this closes the a tags in the footer nav
+	} // this closes the nav in footer
+
+	.logo{
+		width: 10%;
+		.center();
+	} // this closes the logo
+} //this closes the footer
