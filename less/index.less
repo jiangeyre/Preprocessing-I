@@ -48,12 +48,238 @@ table {
 	border-spacing: 0;
 }
 
+/* VARIABLES */
+@font: 'Barlow', sans-serif;
+@bg-color: black;
+@section-color-1: lightslategrey;
+@section-color-2: darkslategrey;
+@section-color-3: darkcyan;
+@section-color-4: olivedrab;
+@section-color-5: mediumseagreen;
+@section-color-6: lightsteelblue;
+
+/* MIXINS */
+.centre(){
+	display: flex;
+	justify-content: center;
+}
+.border(){
+	border: 2px dotted gainsboro;
+	padding: 2%;
+}
+
 /* Set every element's box-sizing to border-box */
 * {
     box-sizing: border-box;
 }
 
 html, body {
-    height: 100%;
+	box-sizing: border-box;
+	height: 100%;
+	font-size: 62.5%;
+	.centre();
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+  }
+body{
+	background-color: @bg-color;
+	font-family: @font;
+	width: 100%;
+}
+img{
+	width: 100%;
+	height: auto;
+}
+p{
+	line-height: 1.25;
+	margin: 20px 0;
+	font-size: 1.8rem;
 }
 
+hr{
+	color: gainsboro;
+}
+
+.container{
+	max-width: 900px;
+	margin: 0 auto;
+	font-size: 1.6rem;
+}
+
+header{
+	width: 100%;
+	.centre();
+
+	nav{
+		padding: 2%;
+		z-index: 999;
+		width: 100%;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+
+		a{
+			text-decoration: none;
+			color: white;
+			font-size: 2rem;
+			
+		} //this closes the a tags in nav
+	} //this closes the nav tag in header
+
+	.logo{
+		width: 10%;
+		.centre();
+	}//this closes the logo
+} //this closes the header
+
+.personal-info-container{
+	background-color: @section-color-1;
+	width: 100%;
+	padding: 5%;
+	padding-left: -2%;
+	.border();
+
+	@media( max-width: 500px ){
+		padding: 10%;
+	}
+
+	.personal-info{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		line-height: 1.5;
+		h1{
+			font-size: 3rem;
+		}
+		h2{
+			font-size: 2.5rem;
+		}
+	}
+}
+
+.intro-container{
+	background-color: @section-color-2;
+	color: white;
+	padding: 2%;
+	.border();
+
+	@media( max-width: 500px ){
+		padding: 10%;
+	}
+
+	h2{
+		font-size: 3rem;
+	}
+}
+
+.work-container{
+	background-color: @section-color-3;
+	padding: 2%;
+	.border();
+
+	@media( max-width: 500px ){
+		padding: 10%;
+	}
+	h2{
+		font-size: 3rem;
+	}
+}
+
+.skills-container{
+	background-color: @section-color-2;
+	padding: 2%;
+	font-size: 2rem;
+	.border();
+
+	@media( max-width: 500px ){
+		padding: 10%;
+	}
+
+	.skills{
+		ul{
+			list-style: square;
+			li{
+				font-size: 1.5rem;
+				margin: 3%;
+			}
+		}
+	}
+}
+
+.interests-container{
+	background-color: @section-color-1;
+	padding: 2%;
+	font-size: 2rem;
+	.border();
+
+	@media( max-width: 500px ){
+		padding: 10%;
+	}
+
+	.interests{
+		ul{ 
+			list-style: square;
+			li{
+				font-size: 1.5rem;
+				margin: 3%;
+				a{
+					text-decoration: underline overline wavy tomato;
+					color: black;
+				}
+			}
+		}
+	}
+}
+
+.links-container{
+	background-color: @section-color-6;
+	width: 100%;
+	padding: 3%;
+
+	@media( max-width: 500px ){
+		padding: 10%;
+	}
+
+	.links{
+		display: flex;
+		justify-content: space-evenly;
+		color: black;
+		a{
+			text-decoration: none;
+			color: black;
+			.fab{
+				width: 20px !important;
+				height: 20px !important;
+			}
+		}
+	}
+}
+
+footer{
+	width: 100%;
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: center;
+
+	nav{
+		padding: 2%;
+		z-index: 999;
+		width: 100%;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+
+		a{
+			text-decoration: none;
+			color: white;
+			font-size: 2rem;
+		} // this closes the a tags in the footer nav
+	} // this closes the nav in footer
+
+	.logo{
+		width: 10%;
+		.centre();
+	} // this closes the logo
+} //this closes the footer

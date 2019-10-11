@@ -1,1 +1,332 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* VARIABLES */
+/* MIXINS */
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  box-sizing: border-box;
+  height: 100%;
+  font-size: 62.5%;
+  display: flex;
+  justify-content: center;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  background-color: black;
+  font-family: 'Barlow', sans-serif;
+  width: 100%;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+p {
+  line-height: 1.25;
+  margin: 20px 0;
+  font-size: 1.8rem;
+}
+hr {
+  color: gainsboro;
+}
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 1.6rem;
+}
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+header nav {
+  padding: 2%;
+  z-index: 999;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+header nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 2rem;
+}
+header .logo {
+  width: 10%;
+  display: flex;
+  justify-content: center;
+}
+.personal-info-container {
+  background-color: lightslategrey;
+  width: 100%;
+  padding: 5%;
+  padding-left: -2%;
+  border: 2px dotted gainsboro;
+  padding: 2%;
+}
+@media (max-width: 500px) {
+  .personal-info-container {
+    padding: 10%;
+  }
+}
+.personal-info-container .personal-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.5;
+}
+.personal-info-container .personal-info h1 {
+  font-size: 3rem;
+}
+.personal-info-container .personal-info h2 {
+  font-size: 2.5rem;
+}
+.intro-container {
+  background-color: darkslategrey;
+  color: white;
+  border: 2px dotted gainsboro;
+  padding: 2%;
+}
+@media (max-width: 500px) {
+  .intro-container {
+    padding: 10%;
+  }
+}
+.intro-container h2 {
+  font-size: 3rem;
+}
+.work-container {
+  background-color: darkcyan;
+  border: 2px dotted gainsboro;
+  padding: 2%;
+}
+@media (max-width: 500px) {
+  .work-container {
+    padding: 10%;
+  }
+}
+.work-container h2 {
+  font-size: 3rem;
+}
+.skills-container {
+  background-color: darkslategrey;
+  font-size: 2rem;
+  border: 2px dotted gainsboro;
+  padding: 2%;
+}
+@media (max-width: 500px) {
+  .skills-container {
+    padding: 10%;
+  }
+}
+.skills-container .skills ul {
+  list-style: square;
+}
+.skills-container .skills ul li {
+  font-size: 1.5rem;
+  margin: 3%;
+}
+.interests-container {
+  background-color: lightslategrey;
+  font-size: 2rem;
+  border: 2px dotted gainsboro;
+  padding: 2%;
+}
+@media (max-width: 500px) {
+  .interests-container {
+    padding: 10%;
+  }
+}
+.interests-container .interests ul {
+  list-style: square;
+}
+.interests-container .interests ul li {
+  font-size: 1.5rem;
+  margin: 3%;
+}
+.interests-container .interests ul li a {
+  text-decoration: underline overline wavy tomato;
+  color: black;
+}
+.links-container {
+  background-color: lightsteelblue;
+  width: 100%;
+  padding: 3%;
+}
+@media (max-width: 500px) {
+  .links-container {
+    padding: 10%;
+  }
+}
+.links-container .links {
+  display: flex;
+  justify-content: space-evenly;
+  color: black;
+}
+.links-container .links a {
+  text-decoration: none;
+  color: black;
+}
+.links-container .links a .fab {
+  width: 20px !important;
+  height: 20px !important;
+}
+footer {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+}
+footer nav {
+  padding: 2%;
+  z-index: 999;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+footer nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 2rem;
+}
+footer .logo {
+  width: 10%;
+  display: flex;
+  justify-content: center;
+}
